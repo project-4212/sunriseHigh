@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>For loop example </title>
+	<style>
+		/* Basic CSS styling */
+		body {
+			font-family: Arial, sans-serif;
+			background-color: #f4f4f4;
+			margin: 0;
+			padding: 0;
+		}
+		.container {
+			width: 80%;
+			margin: 0 auto;
+			text-align: center;
+			padding: 50px;
+			background-color: white;
+			border-radius: 10px;
+			box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+		}
+		h1 {
+			color: #333;
+		}
+		#Number {
+			font-size: 18px;
+			color: #555;
+		}
+		button {
+			padding: 10px 20px;
+			font-size: 16px;
+			background-color: #4CAF50;
+			color: white;
+			border: none;
+			border-radius: 5px;
+			cursor: pointer;
+			margin-top: 20px;
+		}
+		button:hover {
+			background-color: #45a049;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<h1> This is for loop example </h1>
+		<p id="Number"> Display Number </p>
+		<button onclick="mycal()"> Calculate </button>
+	</div>
+
+	<script type="text/javascript">
+		function mycal() {
+			alert("I am inside function!")
+			for (var a=0; a<=10; a++) {
+				document.write("The Number is --> " + a + "<br>");
+			}
+		}
+	</script>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title> While Loop </title>
+</head>
+<body>
+	<p id="demo"></p>
+
+	<script type="text/javascript">
+		var text=" ";
+		var i =0;
+		while (i<=10){
+			text+="<br> The number is " + i;
+			i++;
+		}
+		document.getElementById("demo").innerHTML=text;
+	</script>
+		
+
+</body>
+</html>
+
+
+<!-- <!DOCTYPE html>
+<html>
+<head>
+	<title> Do while</title>
+</head>
+<body>
+	<h1> Do while</h1>
+	<p id="demo"></p>
+	<script type="text/javascript">
+		var text=" ";
+		var i=0;
+		do{
+			text+="<br> the number is " + i;
+			i++;
+		} while (i < 10);
+		document.getElementById("demo").innerHTML=text;
+	</script> 
+
+</body>
+</html> -->
+<!-- if a=20 it will run only one time in case of do  -->
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Loops and Array</title>
+</head>
+<body>
+	<h1> Loops and Array</h1>
+	<p id="demo"> </p>
+
+
+	<script type="text/javascript">
+		var cars=["BMW", "Volvo", "Saab","Raptor"];
+		var text="";
+
+		for (i=0; i<cars.length; i++){
+			text+=cars[i] + "<br>";
+
+		}
+		document.getElementById("demo").innerHTML=text;
+	</script> 
+
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title> multiple if-else statements</title>
+</head>
+<body>
+	<h1> multiple if-else statements</h1>
+	<p> Click the button to get a time based greetings</p>
+	<button onclick="myFunction()"> Try it </button>
+
+	<p id="demo"> </p>
+
+	<script type="text/javascript">
+		function myFunction(){
+			var greetings;
+			var time=new Date().getHours();
+
+			if (time<10){
+				greetings ="Good morning";
+
+			}
+			else if (time<20){
+				greetings="Good day";
+
+			}
+			else{
+				greetings="Good evening";
+			}
+
+			document.getElementById("demo").innerHTML=greetings;
+		}
+
+	</script>
+
+
+</body>
+</html>

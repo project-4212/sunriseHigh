@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>History Course - Sunrise High School</title>
+  <style>
+    :root {
+      --bg-color: #f0f4f8;
+      --text-color: #333;
+      --header-color: #003366;
+      --highlight-color: #ffcc00;
+    }
+
+    body.dark-mode {
+      --bg-color: #1a1a1a;
+      --text-color: #f0f0f0;
+      --header-color: #222;
+    }
+
+    html, body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+    }
+
+    .container {
+      min-height: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+
+    header {
+      background-color: var(--header-color);
+      color: white;
+      padding: 15px 20px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo-section {
+      display: flex;
+      align-items: center;
+    }
+
+    .logo-section a {
+      display: inline-flex;
+      align-items: center;
+      text-decoration: none;
+      color: white;
+    }
+
+    header img {
+      width: 50px;
+      height: 50px;
+      margin-right: 15px;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 22px;
+    }
+
+    nav {
+      margin-top: 10px;
+    }
+
+    nav a {
+      color: white;
+      margin: 0 10px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover,
+    nav a.active {
+      text-decoration: underline;
+      color: var(--highlight-color);
+    }
+
+    .dark-toggle {
+      background: none;
+      border: 1px solid white;
+      color: white;
+      padding: 5px 10px;
+      margin-left: 10px;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+
+    .main-content {
+      padding: 40px 20px;
+      max-width: 900px;
+      margin: 40px auto;
+      flex: 1;
+    }
+
+    .main-content h2 {
+      font-size: 32px;
+      color: var(--header-color);
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .main-content img {
+      width: 100%;
+      max-width: 600px;
+      margin: 20px auto;
+      display: block;
+      border-radius: 8px;
+    }
+
+    .main-content p {
+      font-size: 18px;
+      text-align: justify;
+      margin-bottom: 20px;
+    }
+
+    .teachers, .schedule {
+      margin-top: 30px;
+    }
+
+    .teachers h3, .schedule h3 {
+      color: var(--header-color);
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    footer {
+      background-color: var(--header-color);
+      color: white;
+      text-align: center;
+      padding: 12px;
+      font-size: 14px;
+    }
+
+    @media (max-width: 600px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      nav {
+        margin-top: 10px;
+        display: flex;
+        flex-wrap: wrap;
+      }
+
+      nav a {
+        margin: 5px 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="logo-section">
+        <a href="index.html">
+          <img src="SchoolLogo.jpg" alt="School Logo">
+          <h1>Sunrise High School</h1>
+        </a>
+      </div>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="academics.html" class="active">Academics</a>
+        <a href="admission.html">Admission</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="contact.html">Contact</a>
+        <button class="dark-toggle" onclick="toggleDarkMode()">🌙 Dark Mode</button>
+      </nav>
+    </header>
+
+    <div class="main-content">
+      <h2>History Department</h2>
+      <img src="history.jpg" alt="History class" style="width:100%; height:300px; border-radius:10px; box-shadow: 0 4px 8px rgba(0,0,0,0.2);" >
+
+      <p>The History Department encourages students to explore civilizations, cultures, revolutions, and key events that shaped our world. We help learners connect the past to the present while developing analytical and research skills.</p>
+
+      <div class="teachers">
+        <h3>Our Teachers:</h3>
+        <ul>
+          <li>Mr. Daniel Thomas – Head of History</li>
+          <li>Ms. Noor Fatima – World History</li>
+          <li>Mr. James Howard – Modern History</li>
+        </ul>
+      </div>
+
+      <div class="schedule">
+        <h3>Weekly Timetable:</h3>
+        <ul>
+          <li>Monday & Wednesday: Ancient and World History</li>
+          <li>Tuesday & Thursday: European and Modern History</li>
+          <li>Friday: Group Discussions and Research Projects</li>
+        </ul>
+      </div>
+    </div>
+
+    <footer>
+      &copy; 2025 Sunrise High School | All rights reserved
+    </footer>
+  </div>
+
+  <script>
+    function toggleDarkMode() {
+      document.body.classList.toggle("dark-mode");
+    }
+  </script>
+</body>
+</html>
